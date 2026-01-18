@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMEED'S-AI | Gemini Matrix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadWords()">
+
+    <canvas id="matrixCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="logo">HAMEED'S <span>AI</span></div>
+    </nav>
+
+    <main class="container">
+        <header class="gemini-header">
+            <h1 class="gradient-text">HAMEED'S-AI</h1>
+            <p class="subtitle">>_ IDENTITY: HAMEEDJUTT | SYSTEM: ACTIVE</p>
+        </header>
+
+        <div class="chat-input-container">
+            <div class="input-fields">
+                <div class="voice-input-wrapper">
+                    <input type="text" id="newWord" placeholder="Enter term...">
+                    <button class="mic-btn" onclick="startSpeech('newWord')">🎤</button>
+                </div>
+                <select id="newCategory" class="category-select">
+                    <option value="AI">AI</option>
+                    <option value="Coding">Coding</option>
+                    <option value="Math">Math</option>
+                    <option value="Science">Science</option>
+                    <option value="General">General</option>
+                </select>
+            </div>
+            <div class="input-fields">
+                <div class="voice-input-wrapper" style="width: 100%;">
+                    <input type="text" id="newDef" placeholder="Enter definition...">
+                    <button class="mic-btn" onclick="startSpeech('newDef')">🎤</button>
+                </div>
+            </div>
+            <div class="actions">
+                <button onclick="addNewWord()" class="btn-primary">Add Entry</button>
+                <button onclick="exportLogs()" class="btn-outline">Export .TXT</button>
+            </div>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-pill active" onclick="filterByCategory('All')">All</button>
+            <button class="filter-pill" onclick="filterByCategory('AI')">AI</button>
+            <button class="filter-pill" onclick="filterByCategory('Coding')">Coding</button>
+            <button class="filter-pill" onclick="filterByCategory('Math')">Math</button>
+        </div>
+
+        <ul id="wordList" class="gemini-list"></ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
