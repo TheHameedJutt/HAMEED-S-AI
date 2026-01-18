@@ -1,0 +1,73 @@
+:root {
+    --gemini-gradient: linear-gradient(90deg, #4285f4, #9b72cb, #d96570);
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.gradient-text {
+    background: var(--gemini-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    text-align: center;
+    color: #9b72cb;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+}
+
+.chat-input-container, .gemini-list li {
+    background: rgba(20, 20, 20, 0.8) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(155, 114, 203, 0.3);
+    padding: 25px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+}
+
+.input-fields { display: flex; gap: 10px; margin-bottom: 10px; }
+.voice-input-wrapper { position: relative; flex: 1; display: flex; }
+
+input, select {
+    background: #28292a;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.mic-btn { position: absolute; right: 10px; background: none; border: none; cursor: pointer; top: 8px; }
+
+.btn-primary { background: var(--gemini-gradient); border: none; color: white; padding: 12px 25px; border-radius: 20px; cursor: pointer; }
+
+.filter-bar { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
+.filter-pill { background: #1e1f20; border: 1px solid #444; color: #aaa; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+.filter-pill.active { background: var(--gemini-gradient); color: white; border: none; }
+
+.category-tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; background: rgba(66, 133, 244, 0.2); color: #4285f4; margin-right: 10px; }
+.delete-btn { color: #ff6b6b; background: none; border: none; cursor: pointer; }
